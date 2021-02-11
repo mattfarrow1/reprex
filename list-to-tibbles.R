@@ -1,7 +1,7 @@
 library(reprex)
 library(tibble)
 
-# Existing Data
+# What I Have
 df <- list(
   list(
     a = tibble(id = rownames(mtcars)[1]),
@@ -16,7 +16,6 @@ df <- list(
 )
 
 # What I Want
-
 a <- tibble(id = rownames(mtcars)[1:2])
 b <- tibble(id = c(rep(a$id[1], 3), 
                    rep(a$id[2], 3)), 
