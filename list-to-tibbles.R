@@ -18,9 +18,11 @@ df <- list(
 # What I Want
 
 a <- tibble(id = rownames(mtcars)[1:2])
-b <- tibble(id = a$id[1],
+b <- tibble(id = c(rep(a$id[1], 3), 
+                   rep(a$id[2], 3)), 
             mtcars[1:6, 2:4])
-c <- tibble(id = a$id[2],
+c <- tibble(id = c(rep(a$id[1], 3), 
+                   rep(a$id[2], 3)),
             mtcars[1:6, 5:7])
 
 
